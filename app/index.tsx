@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'expo-router';
+import { View } from 'react-native';
 
 export default function RootIndex() {
   const router = useRouter();
@@ -8,5 +9,5 @@ export default function RootIndex() {
     router.replace('/screens/home');
   }, [router]);
 
-  return null;
+  return <View style={{ flex: 1, backgroundColor: '#fff' }} />;
 }

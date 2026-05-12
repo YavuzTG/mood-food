@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/(?!.*\\.(?:js|css|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|ico|html)$).*",
+      "source": "/(.*)",
       "destination": "/screens/home.html"
     }
   ]

@@ -9,12 +9,12 @@ import {
   Image,
   Alert,
 } from 'react-native';
-import { useRouter, useSearchParams } from 'expo-router';
+import { useRouter, useLocalSearchParams } from 'expo-router';
 import { RESTAURANTS } from '@/app/data/mockData';
 
 const OrderDetailScreen = () => {
   const router = useRouter();
-  const { id } = useSearchParams();
+  const { id } = useLocalSearchParams();
 
   const restaurant = RESTAURANTS.find((r) => r.id === id);
 

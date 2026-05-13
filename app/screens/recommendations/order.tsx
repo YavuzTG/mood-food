@@ -21,8 +21,14 @@ const OrderScreen = () => {
   const recommendedRestaurants = getRecommendedRestaurants(selectedMood, budget);
 
   const handleSelectRestaurant = (restaurantId: string) => {
-    router.push(`/screens/recommendations/order-detail?id=${restaurantId}`);
-  };
+  router.push({
+    pathname: "/screens/recommendations/order-detail",
+    params: { 
+      id: restaurantId, 
+      selectedMood: selectedMood?.id // Store'dan gelen id (örn: 'happy')
+    }
+  });
+};
 
   const handleHome = () => {
     router.push('/screens/home');
